@@ -5,7 +5,7 @@
 	"maintainer": "Michael Perry <lmperry@stanford.edu>",
 	"author": "Chris Rorden",
 	"url": "https://www.nitrc.org/projects/dcm2nii/",
-	"source": "https://github.com/scitran/apps/tree/master/converter/dcm2nii",
+	"source": "https://github.com/scitran-apps/dcm2nii",
 	"license":  "BSD-2-Clause",
 	"flywheel": "0",
 	"version":  "0.1.0",

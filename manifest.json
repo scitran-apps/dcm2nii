@@ -15,5 +15,8 @@
 			"base": "file",
 			"type": { "enum": [ "dicom", "parrec" ] }
 		}
+	},
+	"custom":{
+		"docker-image": "scitran/dcm2nii:v0.1.0"
 	}
 }

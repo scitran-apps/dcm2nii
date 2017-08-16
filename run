@@ -50,7 +50,7 @@ else
 fi
 
 # Move the dcm2nii.ini file
-mv $FLYWHEEL_BASE/dcm2nii.ini /root/.dcm2nii/dcm2nii.ini
+cp $FLYWHEEL_BASE/dcm2nii.ini /root/.dcm2nii/dcm2nii.ini
 
 # Run the algorithm
 echo -e "$CONTAINER  running dcm2nii..."

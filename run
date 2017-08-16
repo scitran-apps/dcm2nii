@@ -21,6 +21,8 @@ if [ "$(ls -A $OUTPUT_DIR)" ]; then
     echo -e "$CONTAINER  $OUTPUT_DIR is not Empty! Please provide an empty directory and mount at '$OUTPUT_DIR'."
     exit 1
 fi
+# Create output directory if it does not exist
+[[ -d $OUTPUT_DIR ]] || mkdir $OUTPUT_DIR
 
 # The directory that will be sent to dcm2nii
 dicom_dir=''
@@ -47,9 +49,12 @@ else
     dicom_dir=$INPUT_DIR
 fi
 
+# Move the dcm2nii.ini file
+mv $FLYWHEEL_BASE/dcm2nii.ini /root/.dcm2nii/dcm2nii.ini
+
 # Run the algorithm
 echo -e "$CONTAINER  running dcm2nii..."
-dcm2nii $@ -o "$OUTPUT_DIR" "$dicom_dir" &> /dev/null
+dcm2nii -o "$OUTPUT_DIR" "$dicom_dir"
 
 # Get a list of the files in the output directory
 outputs=`find $OUTPUT_DIR -not -path '*/\.*' -type f -name "*"`

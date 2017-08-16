@@ -6,9 +6,7 @@
 This Dockerfile will create a MRICRON Docker image that can execute ```dcm2nii```.
 
 ## Options
-Options are set in `dcm2nii.ini`. Current defaults are set and copied into the container on build.
-
-Optional flags can be passed to the container and will override config in `dcm2nii.ini`.
+Options are set in `dcm2nii.ini`. Current defaults are set and copied into the container on runtime.
 
 ### Build the Image
 To build the image, either download the files from this repo or clone the repo:

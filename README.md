@@ -1,6 +1,10 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/scitran/dcm2nii.svg)](https://hub.docker.com/r/scitran/dcm2nii/)
 [![Docker Stars](https://img.shields.io/docker/stars/scitran/dcm2nii.svg)](https://hub.docker.com/r/scitran/dcm2nii/)
 
+#### Notice
+
+**`dcm2nii` as provided in this build is obsolete!** You are encouraged to please use https://github.com/scitran-apps/dcm2niix, which uses modern versions of [`dcm2niix`](https://github.com/rordenlab/dcm2niix), and is fully supported and actively maintianed. 
+
 ## scitran/dcm2nii
 
 This Dockerfile will create a MRICRON Docker image that can execute ```dcm2nii```.
